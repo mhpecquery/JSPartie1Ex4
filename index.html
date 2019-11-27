@@ -6,12 +6,23 @@
   </head>
   <body>
     <form class="formulaire" action="index.html" method="post">
-      <script>
-        var lastname = 'Doe';
-        var firstname = 'John';
-        var city = 'New York';
-        alert('Nom = ' + lastname + '\n' + 'Prénom = ' + firstname + '\n' + 'Ville = ' + city);
-      </script>
+      <label for="name">Nom :</label>
+      <input type="text" name="name" value="Nom"></br>
+      <label for="firstname">Prénom :</label>
+      <input type="text" name="firstname" value="Prénom"></br>
+      <label for="city">Ville :</label>
+      <input type="text" name="city" value="Ville"></br>
+      <input type="button" value="Valider" id="boutonEnvoi">
     </form>
+    <script>
+    //Déclaration de la variable formulaire valide pour accepter les éléments entrés par l'utilisateur
+      var formvalid = document.getElementById('boutonEnvoi');
+    //Envoi des éléments entrés par l'utilisateur dès qu'il clique sur le bouton Valider
+      formvalid.addeventListener('click', validation);
+    //Fonction validation des éléments entrés
+      function validation(){
+
+      };
+    </script>
   </body>
 </html>
